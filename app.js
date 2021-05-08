@@ -13,7 +13,7 @@ let offset = 0;
 // const url = `http://gateway.marvel.com/v1/public/comics?limit=20&offset=${offset}&ts=${timestamp}&apikey=${publica}&hash=${hash}`;
 
 const fetchData = () => {
-  const url = `http://gateway.marvel.com/v1/public/comics?limit=20&offset=${offset}&ts=${timestamp}&apikey=${publica}&hash=${hash}`;
+  const url = `https://gateway.marvel.com/v1/public/comics?limit=20&offset=${offset}&ts=${timestamp}&apikey=${publica}&hash=${hash}`;
   fetch(url)
   .then(response => response.json())
   .then(obj => printData(obj.data.results))
@@ -33,7 +33,7 @@ boton2.addEventListener('click', () => {
 
 
 const getId = id => {
-  const url = `http://gateway.marvel.com/v1/public/comics/${id}?ts=${timestamp}&apikey=${publica}&hash=${hash}`;
+  const url = `https://gateway.marvel.com/v1/public/comics/${id}?ts=${timestamp}&apikey=${publica}&hash=${hash}`;
   fetch(url)
     .then(resp => resp.json())
     .then(obj => printDetailComic(obj.data.results))
