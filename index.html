@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
   <link rel="stylesheet" href="./style.css">
   <title>API prueba</title>
@@ -60,14 +61,26 @@
         </div>
       </div>
     </nav>
+    <p> El total es de: <span id="total">0</span></p>
     <div id="root" class="columns is-flex-wrap-wrap">
     </div>
+    <section id="container-comic-info" class="container mb-5">
+      <div id="comic-info" class="p-6"></div>
+      <div id="comic-characters-results" class="p-6"></div>
+      <div id="comic-characters-info" class="columns is-flex is-flex-wrap-wrap px-6 pt-0"></div>
+  </section>
+  <section id="container-character-info" class="container mb-5">
+      <div id="character-info" class="p-6"></div>
+      <div id="character-comics-results" class="p-6"></div>
+      <div id="character-comics-info" class="columns is-flex is-flex-wrap-wrap px-6 pt-0"></div>
+  </section>
   </main>
 
-  <footer class="container">
+  
+  <!-- <footer class="container">
     <nav class="pagination" role="navigation" aria-label="pagination">
-      <a id='boton1' class="pagination-previous" title="This is the first page">Previous</a>
-      <a id="boton2" class="pagination-next">Next page</a>
+      <button id='boton1' class="pagination-previous" title="This is the first page">Previous</button>
+      <button id="boton2" class="pagination-next">Next page</button>
       <ul class="pagination-list">
         <li>
           <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
@@ -80,10 +93,43 @@
         </li>
       </ul>
     </nav>
-  </footer>
+  </footer> -->
 
+  <div class="pagination">
+    <button
+      id="boton-inicio"
+      type="button"
+      class="first-page pagination-button"
+      aria-label="Página previa"
+    >
+      <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+    </button>
+    <button
+      id="boton1"
+      type="button"
+      class="previous-page pagination-button"
+      aria-label="Página Anterior"
+    >
+      <i class="fas fa-angle-left" aria-hidden="true"></i>
+    </button>
+    <button
+      id="boton2"
+      type="button"
+      class="next-page pagination-button"
+      aria-label="Siguiente ´Página"
+    >
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    </button>
+    <button
+      id="boton-final"
+      type="button"
+      class="last-page pagination-button"
+      aria-label="Última página"
+    >
+      <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+    </button>
+  </div>
 
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js" integrity="sha512-Hmp6qDy9imQmd15Ds1WQJ3uoyGCUz5myyr5ijainC1z+tP7wuXcze5ZZR3dF7+rkRALfNy7jcfgS5hH8wJ/2dQ==" crossorigin="anonymous"></script>
   <script src="./app.js"></script>
   <script src="./main.js"></script>
